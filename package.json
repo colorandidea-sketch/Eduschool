@@ -14,22 +14,19 @@
     "test": "turbo test",
     "test:e2e": "playwright test",
     "typecheck": "turbo typecheck",
-
     "db:generate": "prisma generate",
     "db:push": "prisma db push",
     "db:migrate": "prisma migrate deploy",
     "db:seed": "tsx prisma/seed.ts",
-
     "format": "prettier --write \"**/*.{ts,tsx,json,md}\"",
-
     "prepare": "husky",
     "postinstall": "prisma generate"
   },
   "devDependencies": {
     "@types/node": "^20.11.0",
-    "@typescript-eslint/eslint-plugin": "^7.0.0",
-    "@typescript-eslint/parser": "^7.0.0",
-    "eslint": "^9.0.0",
+    "@typescript-eslint/eslint-plugin": "^7.18.0",
+    "@typescript-eslint/parser": "^7.18.0",
+    "eslint": "^8.57.0",
     "husky": "^9.0.0",
     "lint-staged": "^15.2.0",
     "prettier": "^3.2.0",
