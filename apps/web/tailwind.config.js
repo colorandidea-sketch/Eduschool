@@ -1,0 +1,142 @@
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  darkMode: ['class'],
+  content: [
+    './pages/**/*.{ts,tsx}',
+    './components/**/*.{ts,tsx}',
+    './app/**/*.{ts,tsx}',
+    './src/**/*.{ts,tsx}',
+    '../../packages/ui/**/*.{ts,tsx}',
+  ],
+  theme: {
+    container: {
+      center: true,
+      padding: '2rem',
+      screens: {
+        '2xl': '1400px',
+      },
+    },
+    extend: {
+      colors: {
+        primary: {
+          DEFAULT: '#1E3A5F',
+          50: '#E6EBF1',
+          100: '#C5D1DE',
+          200: '#94A8BE',
+          300: '#63809D',
+          400: '#32617C',
+          500: '#1E3A5F',
+          600: '#1A3354',
+          700: '#162B48',
+          800: '#11233D',
+          900: '#0D1B31',
+          950: '#080F17',
+        },
+        secondary: {
+          DEFAULT: '#2ECC71',
+          50: '#E8F9EE',
+          100: '#C6F0D5',
+          200: '#8DE2AB',
+          300: '#54D382',
+          400: '#2ECC71',
+          500: '#27AE60',
+          600: '#1F9450',
+          700: '#187540',
+          800: '#105630',
+          900: '#083720',
+        },
+        accent: {
+          DEFAULT: '#F39C12',
+          50: '#FEF6E4',
+          100: '#FCE9BD',
+          200: '#F9D88B',
+          300: '#F7C759',
+          400: '#F4B627',
+          500: '#F39C12',
+          600: '#C47C0E',
+          700: '#935D0B',
+          800: '#623E07',
+          900: '#311F04',
+        },
+        background: '#F8F9FA',
+        foreground: '#2C3E50',
+        card: {
+          DEFAULT: '#FFFFFF',
+          foreground: '#2C3E50',
+        },
+        muted: {
+          DEFAULT: '#7F8C8D',
+          foreground: '#7F8C8D',
+        },
+        success: '#27AE60',
+        warning: '#F39C12',
+        error: '#E74C3C',
+        info: '#3498DB',
+        border: '#E1E8ED',
+        input: '#E1E8ED',
+        ring: '#1E3A5F',
+      },
+      fontFamily: {
+        sans: ['IBM Plex Sans Arabic', 'Inter', 'sans-serif'],
+        mono: ['IBM Plex Mono', 'monospace'],
+        arabic: ['IBM Plex Sans Arabic', 'sans-serif'],
+        english: ['Inter', 'sans-serif'],
+      },
+      spacing: {
+        '18': '4.5rem',
+        '88': '22rem',
+        '128': '32rem',
+      },
+      borderRadius: {
+        lg: '0.5rem',
+        md: '0.375rem',
+        sm: '0.25rem',
+      },
+      keyframes: {
+        'accordion-down': {
+          from: { height: '0' },
+          to: { height: 'var(--radix-accordion-content-height)' },
+        },
+        'accordion-up': {
+          from: { height: 'var(--radix-accordion-content-height)' },
+          to: { height: '0' },
+        },
+        'slide-in-from-top': {
+          from: { transform: 'translateY(-100%)' },
+          to: { transform: 'translateY(0)' },
+        },
+        'slide-in-from-bottom': {
+          from: { transform: 'translateY(100%)' },
+          to: { transform: 'translateY(0)' },
+        },
+        'fade-in': {
+          from: { opacity: '0' },
+          to: { opacity: '1' },
+        },
+        'fade-out': {
+          from: { opacity: '1' },
+          to: { opacity: '0' },
+        },
+        'slide-in-right': {
+          from: { transform: 'translateX(100%)' },
+          to: { transform: 'translateX(0)' },
+        },
+        'slide-out-right': {
+          from: { transform: 'translateX(0)' },
+          to: { transform: 'translateX(100%)' },
+        },
+      },
+      animation: {
+        'accordion-down': 'accordion-down 0.2s ease-out',
+        'accordion-up': 'accordion-up 0.2s ease-out',
+        'slide-in-from-top': 'slide-in-from-top 0.3s ease-out',
+        'slide-in-from-bottom': 'slide-in-from-bottom 0.3s ease-out',
+        'fade-in': 'fade-in 0.3s ease-out',
+        'fade-out': 'fade-out 0.3s ease-out',
+        'slide-in-right': 'slide-in-right 0.3s ease-out',
+        'slide-out-right': 'slide-out-right 0.3s ease-out',
+      },
+    },
+  },
+  plugins: [require('tailwindcss-animate')],
+};
